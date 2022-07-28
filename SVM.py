@@ -62,7 +62,7 @@ class SVM:
 
 
     def predict(self, x):
-        if self.weight.dot(x.T) >= 0:
+        if self.weight.dot(x.T) + self.bias>= 0:
             return +1
         else:
             return -1
